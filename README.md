@@ -23,6 +23,8 @@ There were four datasets used to create my main_data frame:
 
 ### Getting to Know My Data
 
+![](https://media.giphy.com/media/2tRoKSKZHYpWvPo9TQ/source.gif)
+
 One of the more challenging and interesting parts of this process was discovering how many variables the state's education takes into account when looking to understand its student base, and what each of them actually mean. For example, in the Graduation Rate DF there were 122 features accounted for, and intuitively at first, I needed to decide whether or not they'd add value to my project's aim. Below are listed explanations for some of the features I was not familiar with and how I choose to handle them.
 
 *DataFrame: "Category", merged into larger DF or chose to discard*
@@ -68,7 +70,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 5. Merge my four datasets into one.
 
 
-### Modeling
+### Modeling and Evaluation
  <center><h6> The Features Explored are: 'SAT_Scores','Expulsion', 'Suspension', 'Other_Action','Total_Eligible_Grads', 'Homeless_Student_Mobility_Rate', 'Economically_Disadvantaged_Student_Mobility_Rate'</h6>
 
  1. With such extreme scales amongst features I standardized the data, then split it into a training and test set.
@@ -96,8 +98,16 @@ Represents the number of students who took a standardized test. Out of 1371 rows
   - The predicted y values based on our test model are: [0.64944435, 0.76904813, 0.79943727, ... 0.87213939, 0.87480383, 0.75804832]
 <br>
 
-5. Running an RMSE function on our predicted and true values yields a root mean squared error of 0.10397958142050694, which is inline with what our summaries suggest above.
+5. Plot points just to be sure...
+<br>
+<img src="https://github.com/HM618/Capstone_1/blob/master/Grad%20Rates.png">
+<br>
+6. Running an RMSE function on our predicted and true values yields a root mean squared error of 0.10397958142050694, which is inline with what our summaries suggest above.
 
-### Conclusions
+### Conclusions and Future Work
 
-With our model seemingly justified in its computations and results, I can conclude that while most features selected were relevant to predicting a graduation rate per district that features do not.
+![](https://giphy.com/gifs/web-search-favimcom-EszqkvmqQY13y)
+
+With our model seemingly justified in its computations and results, I can conclude that while SAT Scores, the amount of expulsions that occur, and the mobility rates of those economically disadvantaged or homeless are strong predictors for graduation rates in a district.
+
+While my model was seemingly very good I'd like to go back through and start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one. I also would like to see what would've happened if I didn't drop so many features just by looking through them, and instead ran lasso regression models to tell me which I should get rid of. 

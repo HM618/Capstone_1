@@ -38,6 +38,7 @@ def clean_data(dataset):
     cols = [col.replace(' ', '_') for col in cols]
     discipline_action.columns = cols
     discipline_action['Expulsion'] = discipline_action['Expulsion_With_Services'] + discipline_action['Expulsion_Without_Services']
+    #Jane says: can you turn the next 8 lines into a for loop? i.e., make a list of variables you want to drop, then iterate through that list, using the 'drop' command
     discipline_action.drop('Expulsion_With_Services', inplace=True, axis=1)
     discipline_action.drop('Expulsion_Without_Services', inplace=True, axis=1)
     discipline_action.drop('Gender', inplace=True, axis=1)
@@ -109,6 +110,7 @@ def clean_data(dataset):
     # mobility_rates['Homeless_Student_Mobility_Rate'] = mobility_rates['Homeless_Student_Mobility_Rate'].astype(int)
 
     #merge
+    #Jane says: similar to comment above about 'drop', can the merging be automatized? e.g., using for loop(s)? 
     df_main = standardized_scores.merge(discipline_action, on='District_Name', how='outer')
     df_main = df_main.merge(grad, on='District_Number', how='outer')
     df_main = df_main.merge(mobility_rates, on='Organization_Name', how='outer')
@@ -119,6 +121,9 @@ def clean_data(dataset):
     df_main['Suspension'] = df_main['In_School_Suspension'] + df_main['Total_Out_of_School_Suspensions']
     df_main['Total_Eligible_Grads'] = df_main['All_Students_Final_Grad_Base']
     df_main = df_main.dropna()
+
+### I would suggest adding an-  if '__name__' == '__main__':
+###  This may make the script a little cleaner
 
 #turn dataset into flat viewable object
 main_data = pd.read_excel('output.xlsx')
