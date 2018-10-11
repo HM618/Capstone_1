@@ -40,7 +40,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 ### Strategy to Create a Main_DataFrame
 
-<center>![](https://media.giphy.com/media/3ov9k56yg3MDP36dyM/giphy.gif)
+![](https://media.giphy.com/media/3ov9k56yg3MDP36dyM/giphy.gif)
 <br>
 <center>*<b>Cleaning Data</b> is a <b>profession</b>*</center>
 <br>
