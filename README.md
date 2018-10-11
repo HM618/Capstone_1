@@ -40,6 +40,9 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 ### Strategy to Create a Main_DataFrame
 
+![](https://media.giphy.com/media/3ov9k56yg3MDP36dyM/giphy.gif)
+Cleaning Data is a profession
+<br>
 1. Dropped redundant features or features that were inclusive of others in a single dataframe (each frame contained between 50 and 125 features, so parsing was a big deal). Used discretion when choosing to include a feature in the Main_DataFrame.
   - ran simple models of some features in question to determine if they were inclusive or collinery with another item I'd chosen.<br>
   *An example of this was when I thought that expulsion counts might be related to Referrals_to_Law_Enforcement, not Total_In_School, Total_Out_of_School_Suspensions, but it was actually only strongly correlated with Referrals_to_Law_Enforcement*<br>
@@ -69,10 +72,10 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
  2. Ran an OLS summary on the training set:
 <br>
-<img src="Capstone_1/OLS Summary for Train Data.png">
+<img src="https://github.com/HM618/Capstone_1/blob/master/OLS%20Summary%20for%20Test%20Data.png">
 <br>
 - The summary suggests that most of the variance in the data is being accurately explained by the model, so let's see how it really does with the holdout set.
 
 3. Ran an OLS summary on the test set:
 <br>
-<img src="Capstone_1/OLS Summary for Train Data.png">
+<img src="https://github.com/HM618/Capstone_1/blob/master/OLS%20Summary%20for%20Test%20Data.png">
