@@ -1,0 +1,59 @@
+
+# def summary_model(X, y, label='scatter'):
+#     X = sm.add_constant(X)
+#     model = sm.OLS(y, X).fit()
+#     summary = model.summary
+#     return summary
+#
+# print(summary_model(X_train, y_train))
+#
+# def plot_model(X, y, label='Residual Plot'):
+#     model = sm.OLS(y, X).fit()
+#     expulsion_resids = model.outlier_test()['Expulsion']
+#     y_hats = model.predict(X)
+#
+#     plt.scatter(y_hats, expulsion_resids, alpha = .35, label=label)
+#     plt.legend()
+#     plt.show()
+#
+#
+# #display residual plots for individual features for compar
+# all_columns = X.columns
+# for col_name in all_columns:
+#     all_columns_copy = list(all_columns)
+#     all_columns_copy.remove(col_name)
+#     plot_model(X[all_columns_copy], y, 'Removed - ' + str(col_name))
+
+#bunk scatter_matrix attempt
+# plotting.scatter_matrix(main_data[['SAT_Scores','Expulsion', 'Suspension', 'Other_Action','Total_Eligible_Grads', 'Homeless_Student_Mobility_Rate', 'Economically_Disadvantaged_Student_Mobility_Rate']], figsize=(8,8))
+# fig = plt.figure(figsize=(8,8))
+# ax1 = fig.add_subplot(111)
+# ax1.set_title('Graduation Prediction')
+# ax1.set_xlabel('Several Variables')
+# ax1.set_ylabel('Graduation Rate')
+# plt.xticks(x, X_train, rotation=45)
+# plt.xticks(y, X_train, rotation=45)
+# plt.margins(0.4)
+
+
+
+
+
+
+#results1 = sm.OLS(endog=y, exog= x, missing='drop').fit()
+#print(results1.summary())
+
+# writer = pd.ExcelWriter('output.xlsx')
+# df_main.to_excel(writer,'CapFrame')
+# writer.save()
+
+# resid_testscores = results1.outlier_test()['Overall_Mean_Score']
+# dev_null1 = sm.graphics.qqplot(resid_testscores, line='45', fit=True)
+
+
+# ax1 = fig.add_subplot(221)
+# sns.regplot(df_main.All_Students_Graduation_Rate, df_main.All_Students_Final_Grad_Base, ax=ax1)
+# ax1.set_title('Graduation Rate versus Grad Base')
+# ax1.set_xlabel('Grad Base')
+# ax1.set_ylabel('Graduation Rate')
+# plt.show()
