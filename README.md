@@ -44,6 +44,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 <br>
 <center>*<b>Cleaning Data</b> is a <b>profession</b>*</center>
 <br>
+
 1. Dropped redundant features or features that were inclusive of others in a single dataframe (each frame contained between 50 and 125 features, so parsing was a big deal). Used discretion when choosing to include a feature in the Main_DataFrame.
   - ran simple models of some features in question to determine if they were inclusive or collinery with another item I'd chosen.<br>
   *An example of this was when I thought that expulsion counts might be related to Referrals_to_Law_Enforcement, not Total_In_School, Total_Out_of_School_Suspensions, but it was actually only strongly correlated with Referrals_to_Law_Enforcement*<br>
@@ -68,6 +69,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 
 ### Modeling
+ <center><h6> The Features Explored are: 'SAT_Scores','Expulsion', 'Suspension', 'Other_Action','Total_Eligible_Grads', 'Homeless_Student_Mobility_Rate', 'Economically_Disadvantaged_Student_Mobility_Rate'</h6>
 
  1. With such extreme scales amongst features I standardized the data, then split it into a training and test set.
 
@@ -75,8 +77,27 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 <br>
 <img src="https://github.com/HM618/Capstone_1/blob/master/OLS%20Summary%20for%20Test%20Data.png">
 <br>
-- The summary suggests that most of the variance in the data is being accurately explained by the model, so let's see how it really does with the holdout set.
+- The summary suggests that most of the variance in the data is being accurately explained by the model.
+- We can see here that 'Expulsion', 'Other_Action' and 'Total_Eligible_Grads' have strong, negative effects on graduation rates, though their p-values suggest completely ignoring 'expulsion' wouldn't necessarily be valuable.  
+
 
 3. Ran an OLS summary on the test set:
 <br>
 <img src="https://github.com/HM618/Capstone_1/blob/master/OLS%20Summary%20for%20Test%20Data.png">
+<br>
+- This summary also seems to account for a large portion of the variance.
+- The model confirms that 'Expulsion', 'Other_Action' and 'Total_Eligible_Grads' have strong negative relationships, and that the three should possibly be excluded in future tests for detecting an influencer of a school district's rate of graduation.
+
+
+4. Fit the model to the training data and then return the y-intercept, beta coefficients and the predicted values
+<br>
+  - The y intercept is 0.676856142824749
+  - The coefficients for each feature are: [ 2.74816975e-04,  1.52176905e-03, -2.09931960e-05,  4.10003043e-06, 5.83668691e-07,  4.66255613e-02, -6.49864122e-01]
+  - The predicted y values based on our test model are: [0.64944435, 0.76904813, 0.79943727, ... 0.87213939, 0.87480383, 0.75804832]
+<br>
+
+5. Running an RMSE function on our predicted and true values yields a root mean squared error of 0.10397958142050694, which is inline with what our summaries suggest above.
+
+### Conclusions
+
+With our model seemingly justified in its computations and results, I can conclude that while most features selected were relevant to predicting a graduation rate per district that features do not.

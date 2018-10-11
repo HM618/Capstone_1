@@ -35,7 +35,7 @@
 # plt.xticks(y, X_train, rotation=45)
 # plt.margins(0.4)
 
-
+standardized_scores = standardized_scores['Overall_Mean_Score'].fillna(x_incomplete.mean())
 
 
 
