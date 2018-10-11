@@ -3,7 +3,7 @@
 When I first began considering the content of this capstone project, I immediately knew that I wanted to delve into the sphere of  education. Specifically, how expenditures affect what is considered an "academically successful environment". However, I learned early on that kind of data would not be given to me this round of pursuit. Instead, I decided to investigate other factors that would potentially have very strong relationships with a school district's graduation rate. In the state of Colorado there are 181 school districts within 64 counties, serving approximately 860,000 students. In this capstone, we are exploring  
 
 
-### Project Objectives
+## Project Objectives
 
 1. To accurately model graduation rates per district by building a linear regression model that utilizes graduation data, SAT/PSAT test scores, data on disciplinary action and mobility data.  
 
@@ -11,7 +11,7 @@ When I first began considering the content of this capstone project, I immediate
 
 2. Identify features that are the most significant predictors of graduation rates.
 
-### Data Source
+## Data Source
 
 There were four datasets used to create my main_data frame:
 
@@ -21,7 +21,7 @@ There were four datasets used to create my main_data frame:
 4. <a href="https://collegereadiness.collegeboard.org/sat/scores">SAT scores</a> are from reports maintained by the College Board.
 
 
-### Getting to Know My Data
+## Getting to Know My Data
 
 ![](https://media.giphy.com/media/2tRoKSKZHYpWvPo9TQ/source.gif)
 
@@ -40,7 +40,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 <p><b>Grad_District_Rate: "All Students Completion Rate'", dropped</b><br> A ratio of students who receive a diploma after spending five or more years in a high school.</p>  
 
-### Strategy to Create a Main_DataFrame
+## Strategy to Create a Main_DataFrame
 
 ![](https://media.giphy.com/media/3ov9k56yg3MDP36dyM/giphy.gif)
 <br>
@@ -70,7 +70,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 5. Merge my four datasets into one.
 
 
-### Modeling and Evaluation
+## Modeling and Evaluation
  <center><h6> The Features Explored are: 'SAT_Scores','Expulsion', 'Suspension', 'Other_Action','Total_Eligible_Grads', 'Homeless_Student_Mobility_Rate', 'Economically_Disadvantaged_Student_Mobility_Rate'</h6>
 
  1. With such extreme scales amongst features I standardized the data, then split it into a training and test set.
@@ -104,10 +104,10 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 <br>
 6. Running an RMSE function on our predicted and true values yields a root mean squared error of 0.10397958142050694, which is inline with what our summaries suggest above.
 
-### Conclusions and Future Work
+## Conclusions and Future Work
 
-![](https://giphy.com/gifs/web-search-favimcom-EszqkvmqQY13y)
+![](https://media.giphy.com/media/EszqkvmqQY13y/giphy.gif)
 
 With our model seemingly justified in its computations and results, I can conclude that while SAT Scores, the amount of expulsions that occur, and the mobility rates of those economically disadvantaged or homeless are strong predictors for graduation rates in a district.
 
-While my model was seemingly very good I'd like to go back through and start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one. I also would like to see what would've happened if I didn't drop so many features just by looking through them, and instead ran lasso regression models to tell me which I should get rid of. 
+While my model was seemingly very good I'd like to go back through and start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one. I also would like to see what would've happened if I didn't drop so many features just by looking through them, and instead ran lasso regression models to tell me which I should get rid of.
