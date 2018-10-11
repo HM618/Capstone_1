@@ -23,7 +23,7 @@ There were four datasets used to create my main_data frame:
 
 ## Getting to Know My Data
 
-![](https://media.giphy.com/media/2tRoKSKZHYpWvPo9TQ/giphy.gif)
+![](https://media.giphy.com/media/1AHFDmY6X1sUd66knT/giphy.gif)
 
 One of the more challenging and interesting parts of this process was discovering how many variables the state's education takes into account when looking to understand its student base, and what each of them actually mean. For example, in the Graduation Rate DF there were 122 features accounted for, and intuitively at first, I needed to decide whether or not they'd add value to my project's aim. Below are listed explanations for some of the features I was not familiar with and how I choose to handle them.
 
