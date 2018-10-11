@@ -40,8 +40,9 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 ### Strategy to Create a Main_DataFrame
 
-![](https://media.giphy.com/media/3ov9k56yg3MDP36dyM/giphy.gif)
-Cleaning Data is a profession
+<center>![](https://media.giphy.com/media/3ov9k56yg3MDP36dyM/giphy.gif)</center>
+<br>
+<center>*<b>Cleaning Data</b> is a <b>profession</b>*</center>
 <br>
 1. Dropped redundant features or features that were inclusive of others in a single dataframe (each frame contained between 50 and 125 features, so parsing was a big deal). Used discretion when choosing to include a feature in the Main_DataFrame.
   - ran simple models of some features in question to determine if they were inclusive or collinery with another item I'd chosen.<br>
