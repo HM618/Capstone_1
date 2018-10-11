@@ -1,6 +1,6 @@
 # Predicting Graduation Rates
 
-When I first began considering the content of this capstone project, I immediately knew that I wanted to delve into the sphere of  education. Specifically, how expenditures affect what is considered an "academically successful environment". However, I learned early on that kind of data would not be given to me this round of pursuit. Instead, I decided to investigate other factors that would potentially have very strong relationships with a school district's graduation rate. In the state of Colorado there are 181 school districts within 64 counties, serving approximately 860,000 students. In this capstone, we are exploring  
+When I first began considering the content of this capstone project, I immediately knew that I wanted to delve into the sphere of education. Specifically, how expenditures affect what is considered an "academically successful environment". However, I learned early on that kind of data would not be given to me this round of pursuit. Instead, I decided to investigate other factors that would potentially have very strong relationships with a school district's graduation rate. In the state of Colorado there are 181 school districts within 64 counties, serving approximately 860,000 students. Each of the datasets used in the execution of this project contained thorouggh documentation about it's students in relation to whatever the data was about.  
 
 
 ## Project Objectives
@@ -22,8 +22,6 @@ There were four datasets used to create my main_data frame:
 
 
 ## Getting to Know My Data
-
-![](https://media.giphy.com/media/1AHFDmY6X1sUd66knT/giphy.gif)
 
 One of the more challenging and interesting parts of this process was discovering how many variables the state's education takes into account when looking to understand its student base, and what each of them actually mean. For example, in the Graduation Rate DF there were 122 features accounted for, and intuitively at first, I needed to decide whether or not they'd add value to my project's aim. Below are listed explanations for some of the features I was not familiar with and how I choose to handle them.
 
@@ -110,4 +108,4 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 With our model seemingly justified in its computations and results, I can conclude that while SAT Scores, the amount of expulsions that occur, and the mobility rates of those economically disadvantaged or homeless are strong predictors for graduation rates in a district.
 
-While my model was seemingly very good I'd like to go back through and start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one. I also would like to see what would've happened if I didn't drop so many features just by looking through them, and instead ran lasso regression models to tell me which I should get rid of.
+While my model was seemingly very good I'd like to go back through and start with one data set at a time. I would do a more thorough cleaning and aggregating job prior to merging the four sets into one. I also would like to see what would've happened if I didn't drop so many features just by looking through them, and instead ran lasso regression models to tell me which I should get rid of.
