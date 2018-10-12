@@ -87,18 +87,19 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 <br>
 - This summary also seems to account for a large portion of the variance.
 - The model confirms that 'Expulsion', 'Other_Action' and 'Total_Eligible_Grads' have strong negative relationships, and that the three should possibly be excluded in future tests for detecting an influencer of a school district's rate of graduation.
-
+<br>
 
 4. Fit the model to the training data and then return the y-intercept, beta coefficients and the predicted values
 <br>
   - The y intercept is 0.676856142824749
-  - The coefficients for each feature are: [ 2.74816975e-04,  1.52176905e-03, -2.09931960e-05,  4.10003043e-06, 5.83668691e-07,  4.66255613e-02, -6.49864122e-01]
+  - The coefficients for each feature are: [ 2.74816975e-04,  1.52176905e-03, -2.09931960e-05,  4.10003043e-06, 5.83668691e-     07,  4.66255613e-02, -6.49864122e-01]
   - The predicted y values based on our test model are: [0.64944435, 0.76904813, 0.79943727, ... 0.87213939, 0.87480383, 0.75804832]
 <br>
-
+<br>
 5. Plot points just to be sure...
 <br>
 <img src="https://github.com/HM618/Capstone_1/blob/master/Grad%20Rates.png">
+<br>
 <br>
 6. Running an RMSE function on our predicted and true values yields a root mean squared error of 0.10397958142050694, which is inline with what our summaries suggest above.
 
