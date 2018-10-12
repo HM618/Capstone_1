@@ -107,6 +107,10 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 ![](https://media.giphy.com/media/EszqkvmqQY13y/giphy.gif)
 
-With our model seemingly justified in its computations and results, I can conclude that while SAT Scores, the amount of expulsions that occur, and the mobility rates of those economically disadvantaged or homeless are strong predictors for graduation rates in a district.
+With our model seemingly justified in its computations and results, I can conclude that SAT Scores, the amount of expulsions that occur, and the mobility rates of those economically disadvantaged or homeless(and potentially smaller class sizes) are strong predictors for graduation rates in a district.
 
-While my model was seemingly very good I'd like to go back through and start with one data set at a time. I would do a more thorough cleaning and aggregating job prior to merging the four sets into one. I also would like to see what would've happened if I didn't drop so many features just by looking through them, and instead ran lasso regression models to tell me which I should get rid of.
+While my model was seemingly very good I'd like to go back through once more. I imagine there might be some collinearity amongst features that I didn't account for, and discarded features too early on to note whether they have an impact or not. I would run lasso regression models to statistically sort features rather than using discretion right from the start. I'd also start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one.
+
+I did not provide the kind of visual content I'd hoped to use in communicating my results. If I am to continue this task and explore the question further, visuals and more tools in analysis are a must.
+
+![](https://media.giphy.com/media/xIJLgO6rizUJi/giphy.gif)
