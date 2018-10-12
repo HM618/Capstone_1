@@ -50,22 +50,20 @@ Represents the number of students who took a standardized test. Out of 1371 rows
   *An example of this was when I thought that expulsion counts might be related to Referrals_to_Law_Enforcement, not Total_In_School, Total_Out_of_School_Suspensions, but it was actually only strongly correlated with Referrals_to_Law_Enforcement*<br>
   <br>
 
-2. To simplify the initial analysis, all data was restricted to the years 2016 through 2017.
-
-3. Used missingno matrices and heatmaps to show missing values.
+2. Used missingno matrices and heatmaps to show missing values.
 <br>
  - *there was a pattern in the SAT dataset amongst missing values in Overall_Mean_Score, Total_Value_Score and Participation_Rate. Dropped Total_Value_Score and Participation_Rate and filled the missing values with the mean score.*
  <br>
 
 
-4. Since each dataset has slightly different labels to represent the same thing, I determined where commonality existed and renamed the  appropriate categories to merge on.
+3. Since each dataset has slightly different labels to represent the same thing, I determined where commonality existed and renamed the  appropriate categories to merge on.
 <br>
 
   - *examples: <br>(discipline_action['District_Name'] == standardized_scores['District_Name'])
 (grad['Organization_Name'] == standardized_scores['District_Number'])*
 
 
-5. Merge my four datasets into one.
+4. Merge my four datasets into one.
 
 
 ## Modeling and Evaluation
@@ -109,7 +107,7 @@ Represents the number of students who took a standardized test. Out of 1371 rows
 
 With our model seemingly justified in its computations and results, I can conclude that SAT Scores, the amount of expulsions that occur, and the mobility rates of those economically disadvantaged or homeless(and potentially smaller class sizes) are strong predictors for graduation rates in a district.
 
-While my model was seemingly very good I'd like to go back through once more. I imagine there might be some collinearity amongst features that I didn't account for, and discarded features too early on to note whether they have an impact or not. I would run lasso regression models to statistically sort features rather than using discretion right from the start. I'd also start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one.
+While my model was seemingly very good I'd like to go back through once more, perhaps examining years individually to make a predictive model. I imagine there might be some collinearity amongst features that I didn't account for, and discarded features too early on to note whether they have an impact or not. I would run lasso regression models to statistically sort features rather than using discretion right from the start. I'd also start with one data set at a time and done a more thorough job of cleaning and aggregating prior to merging the four sets into one.
 
 I did not provide the kind of visual content I'd hoped to use in communicating my results. If I am to continue this task and explore the question further, visuals and more tools in analysis are a must.
 
