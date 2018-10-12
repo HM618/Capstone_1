@@ -1,4 +1,4 @@
-# Predicting Graduation Rates
+# Graduation Rates and the Relationships to them
 
 When I first began considering the content of this capstone project, I immediately knew that I wanted to delve into the sphere of education. Specifically, how expenditures affect what is considered an "academically successful environment". However, I learned early on that kind of data would not be given to me this round of pursuit. Instead, I decided to investigate other factors that would potentially have very strong relationships with a school district's graduation rate. In the state of Colorado there are 181 school districts within 64 counties, serving approximately 860,000 students. Each of the datasets used in the execution of this project contained thorouggh documentation about it's students in relation to whatever the data was about.  
 
